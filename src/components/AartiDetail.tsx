@@ -35,7 +35,7 @@ const AartiDetail: React.FC<AartiDetailProps> = ({ id, deity, title, content, au
   };
 
   return (
-    <div className="container mx-auto py-6 px-2">
+    <div className="container mx-auto py-6 px-1">
       <Card className="overflow-hidden border-divine/20">
         <div className="bg-divine p-6 text-white">
           <div className="flex justify-between items-center">
@@ -56,7 +56,7 @@ const AartiDetail: React.FC<AartiDetailProps> = ({ id, deity, title, content, au
         
         {audioUrl && <AudioPlayer audioUrl={audioUrl} />}
         
-        <CardContent className="p-4">
+        <CardContent className="p-3">
           <div className="aarti-text whitespace-pre-line">
             {(() => {
               const lines = content.split('\n').filter(line => line.trim() !== '');

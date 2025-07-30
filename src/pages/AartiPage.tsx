@@ -33,7 +33,7 @@ const AartiPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <Header />
-      <div className="container mx-auto py-4 px-2">
+      <div className="container mx-auto py-4 px-1">
         <Button 
           onClick={goBack} 
           variant="ghost" 

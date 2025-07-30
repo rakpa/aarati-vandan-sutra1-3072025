@@ -16,7 +16,7 @@ export function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </header>
-      <main className="w-full px-1 sm:container sm:mx-auto sm:py-6 sm:px-2">
+      <main className="w-full px-0 sm:container sm:mx-auto sm:py-6 sm:px-1">
         {children}
       </main>
     </div>
