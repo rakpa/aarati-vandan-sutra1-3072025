@@ -34,16 +34,26 @@ workflows:
           # Verify build output exists
           ls -la build/ || ls -la dist/
       
-      - name: Sync Capacitor
+      - name: Initialize and Sync Capacitor
         script: |
-          # Add iOS platform if not exists (safe to run multiple times)
-          npx cap add ios || echo "iOS platform already exists"
-          # Copy web assets to native project
+          # Check if Capacitor is initialized, if not initialize it
+          if [ ! -f "capacitor.config.json" ] && [ ! -f "capacitor.config.ts" ]; then
+            echo "Initializing Capacitor..."
+            npx cap init "aarati-vandan-sutra1-3072025" "com.aarati.vandansutra" --web-dir=build
+          fi
+          
+          # Ensure iOS platform is installed
+          npm install @capacitor/ios
+          
+          # Add iOS platform (this will create the ios folder structure)
+          npx cap add ios
+          
+          # Copy web assets and sync
           npx cap copy ios
-          # Sync Capacitor with iOS
           npx cap sync ios
-          # Verify iOS project structure
-          ls -la ios/App/
+          
+          # Verify iOS project structure was created
+          ls -la ios/App/ || (echo "iOS platform creation failed" && exit 1)
       
       - name: Install CocoaPods dependencies
         script: |
