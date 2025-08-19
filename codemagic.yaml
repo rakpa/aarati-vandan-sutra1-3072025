@@ -4,15 +4,64 @@ workflows:
     environment:
       xcode: latest
       node: latest
+      cocoapods: default
+    cache:
+      cache_paths:
+        - $HOME/.npm
+        - node_modules
     scripts:
       - name: Install dependencies
-        script: npm install
+        script: |
+          # Use npm ci for faster, reliable installs in CI
+          npm ci
+          # Install Capacitor CLI globally to ensure it's available
+          npm install -g @capacitor/cli
+      
+      - name: Verify installations
+        script: |
+          # Verify Node and npm versions
+          node --version
+          npm --version
+          # Verify Capacitor CLI is available
+          npx cap --version
+          # List installed packages to debug dependency issues
+          npm list --depth=0
+      
       - name: Build React app
-        script: npm run build
+        script: |
+          # Build the React application
+          npm run build
+          # Verify build output exists
+          ls -la build/ || ls -la dist/
+      
       - name: Sync Capacitor
-        script: npx cap sync ios
+        script: |
+          # Add iOS platform if not exists (safe to run multiple times)
+          npx cap add ios || echo "iOS platform already exists"
+          # Copy web assets to native project
+          npx cap copy ios
+          # Sync Capacitor with iOS
+          npx cap sync ios
+          # Verify iOS project structure
+          ls -la ios/App/
+      
+      - name: Install CocoaPods dependencies
+        script: |
+          cd ios/App
+          pod install
+      
       - name: Build iOS app
-        script: xcodebuild -workspace ios/App/App.xcworkspace -scheme App -sdk iphoneos -configuration Release archive -archivePath $CM_BUILD_DIR/ios_archive/App.xcarchive
+        script: |
+          cd ios/App
+          xcodebuild -workspace App.xcworkspace \
+            -scheme App \
+            -sdk iphoneos \
+            -configuration Release \
+            archive \
+            -archivePath $CM_BUILD_DIR/ios_archive/App.xcarchive \
+            CODE_SIGNING_ALLOWED=NO
+    
     artifacts:
       - $CM_BUILD_DIR/ios_archive/*.xcarchive
       - build/ios/ipa/*.ipa
+      - ios/App/build/Build/Products/Release-iphoneos/*.app
