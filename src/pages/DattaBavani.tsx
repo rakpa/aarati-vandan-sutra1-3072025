@@ -144,14 +144,14 @@ const DattaBavani = () => {
         </div>
         <Card className="mb-8 border-0 overflow-hidden">
           <div className="bg-divine p-6 text-white">
-            <div className="flex justify-between items-center">
-              <div>
+            <div className="flex justify-between items-center relative">
+              <div className="flex-1 flex flex-col items-center text-center">
                 <h2 className="text-2xl md:text-3xl font-bold">श्री दत्तबावनी</h2>
                 <p className="text-divine-accent mt-1">श्री दत्त</p>
               </div>
               <button
                 type="button"
-                className="text-white hover:text-divine-gold hover:bg-white/20 rounded-full p-2"
+                className="text-white hover:text-divine-gold hover:bg-white/20 rounded-full p-2 absolute right-0"
                 onClick={toggleFavorite}
                 aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
               >

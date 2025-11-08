@@ -53,7 +53,7 @@ export function MenuBar({ menuClassName }: MenuBarProps) {
 
   // Desktop menu
   const desktopMenu = (
-    <ul className={`hidden md:flex space-x-4 items-center ${menuClassName || ''}`}>
+    <ul className={`hidden md:flex items-center gap-4 md:gap-6 ${menuClassName || ''}`}>
       {categoryOrder.map((type) => (
         <li key={type} className="relative">
           <div

@@ -38,15 +38,15 @@ const AartiDetail: React.FC<AartiDetailProps> = ({ id, deity, title, content, au
     <div className="container mx-auto py-6 px-1">
       <Card className="overflow-hidden border-divine/20">
         <div className="bg-divine p-6 text-white">
-          <div className="flex justify-between items-center">
-            <div>
+          <div className="flex justify-between items-center relative">
+            <div className="flex-1 flex flex-col items-center text-center">
               <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
               <p className="text-divine-accent mt-1">{deity}</p>
             </div>
             <Button 
               variant="ghost" 
               size="icon" 
-              className="text-white hover:text-divine-gold hover:bg-white/20"
+              className="text-white hover:text-divine-gold hover:bg-white/20 absolute right-0"
               onClick={toggleFavorite}
             >
               <Heart className={`h-6 w-6 ${isFavorite ? 'fill-divine-gold' : ''}`} />

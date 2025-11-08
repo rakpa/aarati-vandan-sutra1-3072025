@@ -5,15 +5,27 @@ import { MenuBar } from './MenuBar';
 const Header = () => {
   return (
     <header className="divine-gradient text-white shadow-md">
-      <div className="w-full px-2 sm:container sm:mx-auto sm:px-4 py-4 flex flex-row items-center justify-start">
+      <div className="w-full px-2 sm:container sm:mx-auto sm:px-4 py-4 flex flex-col md:flex-row items-center relative">
         <Link
           to="/"
-          className="whitespace-nowrap text-lg md:text-xl font-bold text-divine-gold ml-2 hover:underline focus:underline order-1 md:order-1 mr-4"
+          className="flex items-center gap-2 whitespace-nowrap text-lg md:text-xl font-bold text-divine-gold hover:underline focus:underline mb-3 md:mb-0 md:absolute md:left-4"
           style={{ lineHeight: 1 }}
         >
-          देव आरती संग्रह
+          <img 
+            src="/logo.png.png"
+            alt="देव संस्कृती Logo" 
+            className="h-10 w-10 md:h-12 md:w-12 object-contain rounded-full"
+            onError={(e) => {
+              // Fallback to logo.png if logo.png.png doesn't work
+              const target = e.target as HTMLImageElement;
+              if (!target.src.includes('/logo.png')) {
+                target.src = '/logo.png';
+              }
+            }}
+          />
+          <span>देव संस्कृती</span>
         </Link>
-        <nav className="flex flex-row items-center gap-2 order-2 md:order-2 w-full">
+        <nav className="flex flex-row items-center justify-center gap-4 md:gap-6 w-full">
           <MenuBar menuClassName="text-white font-normal font-marathi text-base" />
           <Link
             to="/"

@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => ({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'देव आरती संग्रह',
+        name: 'देव संस्कृती',
         short_name: 'Aarti',
         start_url: '.',
         display: 'standalone',
