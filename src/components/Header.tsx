@@ -8,13 +8,13 @@ const Header = () => {
       <div className="w-full px-2 sm:container sm:mx-auto sm:px-4 py-4 flex flex-col md:flex-row items-center relative">
         <Link
           to="/"
-          className="flex items-center gap-2 whitespace-nowrap text-lg md:text-xl font-bold text-divine-gold hover:underline focus:underline mb-3 md:mb-0 md:absolute md:left-4"
+          className="flex items-center gap-2 whitespace-nowrap text-xl md:text-2xl font-bold text-divine-gold hover:underline focus:underline mb-3 md:mb-0 md:absolute md:left-4"
           style={{ lineHeight: 1 }}
         >
           <img 
             src="/logo.png.png"
             alt="देव संस्कृती Logo" 
-            className="h-10 w-10 md:h-12 md:w-12 object-contain rounded-full"
+            className="h-12 w-12 md:h-16 md:w-16 object-contain rounded-full"
             onError={(e) => {
               // Fallback to logo.png if logo.png.png doesn't work
               const target = e.target as HTMLImageElement;
