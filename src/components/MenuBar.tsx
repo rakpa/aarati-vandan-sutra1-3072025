@@ -61,7 +61,7 @@ export function MenuBar({ menuClassName }: MenuBarProps) {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-base font-marathi focus:outline-none"
+              className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg font-marathi focus:outline-none"
               style={{ background: openDropdown === type ? 'rgba(255,255,255,0.05)' : undefined }}
               type="button"
             >
@@ -87,7 +87,7 @@ export function MenuBar({ menuClassName }: MenuBarProps) {
         <li key={link.to}>
           <Link
             to={link.to}
-            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-base font-marathi"
+            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg font-marathi"
           >
             {link.label}
           </Link>
