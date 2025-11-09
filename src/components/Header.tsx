@@ -25,19 +25,19 @@ const Header = () => {
           />
           <span>देव संस्कृती</span>
         </Link>
-        <nav className="flex flex-row items-center justify-center gap-4 md:gap-6 w-full">
+        <nav className="flex flex-row items-center justify-start md:justify-center gap-4 md:gap-6 w-full">
           <MenuBar menuClassName="text-white font-normal font-marathi text-lg" />
           <Link
             to="/"
-            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg font-marathi"
+            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg"
           >
-            मुख्यपृष्ठ
+            Home
           </Link>
           <Link
             to="/favorites"
-            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg font-marathi"
+            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg"
           >
-            आवडते
+            Favorites
           </Link>
         </nav>
       </div>
