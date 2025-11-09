@@ -160,7 +160,7 @@ const DattaBavani = () => {
             </div>
           </div>
         </Card>
-        <Card className="bg-white border-divine/10 shadow-sm p-6 whitespace-pre-line text-lg">
+        <Card className="bg-white border-divine/10 shadow-sm p-6 whitespace-pre-line text-xl text-center">
           {dattaBavaniContent}
         </Card>
       </div>

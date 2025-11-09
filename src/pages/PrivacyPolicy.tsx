@@ -51,41 +51,41 @@ const PrivacyPolicy = () => {
           </h2>
         </Card>
         <Card className="bg-white border-divine/10 shadow-sm p-6">
-          <div ref={contentRef} className="prose max-w-none select-none" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>
-            <p className="text-gray-700 mb-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
+          <div ref={contentRef} className="prose max-w-none select-none text-center" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>
+            <p className="text-gray-700 mb-6 text-lg" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
               Devasanskriti.com is dedicated to providing devotional content such as Aarati, Shlok, and Stotra in Marathi and Hindi languages. Your privacy is important to us. This Privacy Policy explains how we handle your information when you use our website and Android app.
             </p>
             
-            <h3 className="text-xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Information Collection and Use</h3>
-            <p className="text-gray-700 mb-4" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
+            <h3 className="text-2xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Information Collection and Use</h3>
+            <p className="text-gray-700 mb-4 text-lg" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
               Currently, we do not collect any personal information from users. In the future, if you choose to sign up for our newsletter or updates, we may collect your email ID. Providing your email ID is completely optional, and it will be used solely to send you devotional updates or newsletters.
             </p>
             
-            <h3 className="text-xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Cookies and Tracking</h3>
-            <p className="text-gray-700 mb-4" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
+            <h3 className="text-2xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Cookies and Tracking</h3>
+            <p className="text-gray-700 mb-4 text-lg" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
               At present, we do not use cookies or any tracking technologies on our website or app. In the future, if we implement Google AdMob or other ad services, standard cookies or tracking technologies may be used by those services to display relevant ads.
             </p>
             
-            <h3 className="text-xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Third-Party Services</h3>
-            <p className="text-gray-700 mb-4" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
+            <h3 className="text-2xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Third-Party Services</h3>
+            <p className="text-gray-700 mb-4 text-lg" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
               We plan to use Google AdMob or other Google advertising services to display ads in our app and website to support our devotional content. These third-party services may collect anonymous information such as device identifiers and ad interaction data to serve personalized ads. We do not control how these services use your data; please review their privacy policies for more details.
             </p>
             
-            <h3 className="text-xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Data Security</h3>
-            <p className="text-gray-700 mb-4" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
+            <h3 className="text-2xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Data Security</h3>
+            <p className="text-gray-700 mb-4 text-lg" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
               We take reasonable measures to protect any personal information you provide, such as your email ID, against unauthorized access, disclosure, or misuse. However, no method of transmission over the internet or electronic storage is completely secure.
             </p>
             
-            <h3 className="text-xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Changes to This Privacy Policy</h3>
-            <p className="text-gray-700 mb-4" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
+            <h3 className="text-2xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Changes to This Privacy Policy</h3>
+            <p className="text-gray-700 mb-4 text-lg" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
               We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify users of significant changes by posting the updated policy on this page. Your continued use of our website or app after changes indicates your acceptance of the updated policy.
             </p>
             
-            <h3 className="text-xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Contact Information</h3>
-            <p className="text-gray-700 mb-4" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
+            <h3 className="text-2xl font-bold text-divine mb-4 mt-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>Contact Information</h3>
+            <p className="text-gray-700 mb-4 text-lg" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
               If you have any questions or concerns about this Privacy Policy or how your data is handled, please contact us at:
             </p>
-            <p className="text-gray-700 mb-4" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
+            <p className="text-gray-700 mb-4 text-lg" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
               <a href="mailto:info@devasanskriti.com" className="text-divine hover:underline" onCopy={(e) => e.preventDefault()}>
                 info@devasanskriti.com
               </a>

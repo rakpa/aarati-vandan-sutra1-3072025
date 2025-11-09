@@ -46,7 +46,7 @@ const FavoritesPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {favoriteAartis.map(aarti => (
               <Card key={aarti.id} className="p-4 border-divine/20">
-                <div className="font-bold text-lg text-divine mb-2">{aarti.title}</div>
+                <div className="font-bold text-xl text-divine mb-2">{aarti.title}</div>
                 <div className="text-gray-700 mb-2">{aarti.deity}</div>
                 <Button
                   variant="outline"

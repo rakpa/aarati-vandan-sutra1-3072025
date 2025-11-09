@@ -58,7 +58,7 @@
 }
 
 .aarti-text {
-  @apply text-lg leading-relaxed;
+  @apply text-xl leading-relaxed text-center;
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;

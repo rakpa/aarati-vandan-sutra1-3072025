@@ -35,13 +35,13 @@ const DeityPage = () => {
           <p className="text-center text-gray-700 max-w-2xl mx-auto">{subtitle}</p>
         </Card>
         <Card className="bg-white border-divine/10 shadow-sm p-6">
-          <ul className="list-disc list-inside">
+          <ul className="list-none text-center">
             {aartis.map((aarti, idx) => (
               <li
                 key={aarti.id}
                 className={idx !== aartis.length - 1 ? "mb-4" : ""}
               >
-                <Link to={`/aarti/${aarti.id}`} className="text-lg font-bold text-divine underline hover:underline">
+                <Link to={`/aarti/${aarti.id}`} className="text-xl font-bold text-divine underline hover:underline">
                   {aarti.title}
                 </Link>
               </li>
@@ -49,7 +49,7 @@ const DeityPage = () => {
             {/* Add Gyaneshwar Haripath link for 'श्री विठ्ठल' only */}
             {deity === 'श्री विठ्ठल' && (
               <li className="mt-4">
-                <Link to="/gyaneshwar-haripath" className="text-lg font-bold text-divine underline hover:underline">
+                <Link to="/gyaneshwar-haripath" className="text-xl font-bold text-divine underline hover:underline">
                   श्री ज्ञानदेव हरिपाठ
                 </Link>
               </li>

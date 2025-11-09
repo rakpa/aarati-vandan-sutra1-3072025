@@ -210,7 +210,7 @@ const GyaneshwarHaripath = () => (
           श्री ज्ञानदेव हरिपाठ
         </h2>
       </Card>
-      <Card className="bg-white border-divine/10 shadow-sm p-6 text-lg whitespace-pre-line overflow-x-auto">
+      <Card className="bg-white border-divine/10 shadow-sm p-6 text-xl whitespace-pre-line overflow-x-auto text-center">
         {haripathContent}
       </Card>
     </div>
