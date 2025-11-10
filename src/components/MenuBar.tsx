@@ -53,7 +53,7 @@ export function MenuBar({ menuClassName }: MenuBarProps) {
 
   // Desktop menu
   const desktopMenu = (
-    <ul className={`hidden md:flex items-center gap-4 md:gap-6 ${menuClassName || ''}`}>
+    <ul className={`hidden md:flex space-x-4 items-center ${menuClassName || ''}`}>
       {categoryOrder.map((type) => (
         <li key={type} className="relative">
           <div
@@ -61,7 +61,7 @@ export function MenuBar({ menuClassName }: MenuBarProps) {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg font-marathi focus:outline-none"
+              className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-base font-marathi focus:outline-none"
               style={{ background: openDropdown === type ? 'rgba(255,255,255,0.05)' : undefined }}
               type="button"
             >
@@ -87,7 +87,7 @@ export function MenuBar({ menuClassName }: MenuBarProps) {
         <li key={link.to}>
           <Link
             to={link.to}
-            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg font-marathi"
+            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-base font-marathi"
           >
             {link.label}
           </Link>
