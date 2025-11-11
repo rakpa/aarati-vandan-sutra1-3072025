@@ -29,13 +29,13 @@ const Header = () => {
           <MenuBar menuClassName="text-white font-normal font-marathi text-lg" />
           <Link
             to="/"
-            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg"
+            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-base"
           >
             Home
           </Link>
           <Link
             to="/favorites"
-            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-lg"
+            className="px-3 py-2 rounded-md hover:bg-divine-light/20 transition-colors font-normal text-base"
           >
             Favorites
           </Link>
